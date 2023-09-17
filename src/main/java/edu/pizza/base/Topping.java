@@ -7,19 +7,27 @@ public class Topping {
 
 
     private String nombre; // Nombre del topping
+
+    private double precio; // Precio del topping
+    public double getPrecio() {
+        return precio;
+    }
+
+
     private ArrayList<String> ingredientes = new ArrayList<>(); // Ingredientes del topping
 
     public void agregarIngrediente(String ingrediente) {
         this.ingredientes.add(ingrediente);
     }
 
-    public Topping(String nombre) {
+    public Topping(String nombre, double precio) {
         this.nombre = nombre;
+        this.precio = precio;
     }
 
     @Override
     public String toString() {
-        return "Topping{" + "nombre='" + nombre + '\'' + ", ingredientes=" + ingredientes + '}';
+        return "Topping{" + nombre + " " + precio + '}';
     }
 
 
